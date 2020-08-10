@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismGTKTest", "PrismGTKTest\PrismGTKTest\PrismGTKTest.csproj", "{730E7EEE-773C-4CAB-BF6E-9B788478EF49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismGTKTest.GTK", "PrismGTKTest.GTK\PrismGTKTest.GTK.csproj", "{B0D5A18F-BB89-4BD7-B351-070B35CA0EFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{730E7EEE-773C-4CAB-BF6E-9B788478EF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{730E7EEE-773C-4CAB-BF6E-9B788478EF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{730E7EEE-773C-4CAB-BF6E-9B788478EF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{730E7EEE-773C-4CAB-BF6E-9B788478EF49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D5A18F-BB89-4BD7-B351-070B35CA0EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D5A18F-BB89-4BD7-B351-070B35CA0EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D5A18F-BB89-4BD7-B351-070B35CA0EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D5A18F-BB89-4BD7-B351-070B35CA0EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4219A492-1BE6-472C-8178-DAA7B7596591}
+	EndGlobalSection
+EndGlobal

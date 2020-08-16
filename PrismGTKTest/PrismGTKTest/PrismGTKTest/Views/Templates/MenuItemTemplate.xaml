@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="PrismGTKTest.Views.Templates.MenuItemTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Resources>
+        <Style
+            x:Key="MenuItemStyle"
+            TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource MenuTextColor}" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid>
+            <Label
+                Style="{StaticResource MenuItemStyle}"
+                Text="{Binding Text}" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>

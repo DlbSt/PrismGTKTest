@@ -1,11 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
-             x:Class="PrismGTKTest.App">
-  <Application.Resources>
+<prism:PrismApplication
+    x:Class="PrismGTKTest.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com">
+    <Application.Resources>
 
-    <!-- Application resource dictionary -->
+        <!--  Colors resource dictionary  -->
+        <Color x:Key="NavBarBackgroundColor">Black</Color>
+        <Color x:Key="NavBarTextColor">White</Color>
+        <Color x:Key="ContentBackgroundColor">DimGray</Color>
+        <Color x:Key="ContentTextColor">White</Color>
+        <Color x:Key="MenuBackgroundColor">Black</Color>
+        <Color x:Key="MenuTextColor">White</Color>
 
-  </Application.Resources>
+    </Application.Resources>
 </prism:PrismApplication>

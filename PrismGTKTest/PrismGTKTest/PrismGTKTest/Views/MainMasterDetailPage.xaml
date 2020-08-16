@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage
+    x:Class="PrismGTKTest.Views.MainMasterDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:PrismGTKTest.Converters"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:templates="clr-namespace:PrismGTKTest.Views.Templates"
+    xmlns:views="clr-namespace:PrismGTKTest.Views"
+    Title=" "
+    prism:ViewModelLocator.AutowireViewModel="True"
+    MasterBehavior="Popover">
+    <MasterDetailPage.Resources>
+        <converters:ItemTappedEventArgsConverter x:Key="ItemTappedEventArgsConverter" />
+    </MasterDetailPage.Resources>
+    <MasterDetailPage.Master>
+        <ContentPage Title=" ">
+            <ContentPage.Content>
+                <ListView
+                    BackgroundColor="{StaticResource MenuBackgroundColor}"
+                    CachingStrategy="RecycleElement"
+                    ItemsSource="{Binding MenuItemCollection, Mode=OneTime}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <templates:MenuItemTemplate />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.Behaviors>
+                        <prism:EventToCommandBehavior
+                            Command="{Binding OnNavigateCommand}"
+                            EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}"
+                            EventName="ItemTapped" />
+                    </ListView.Behaviors>
+                </ListView>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <views:CustomNavigationPage>
+            <x:Arguments>
+                <views:HomePage />
+            </x:Arguments>
+        </views:CustomNavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

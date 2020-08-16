@@ -17,7 +17,7 @@ namespace PrismGTKTest.GTK
             var app = new App(new GtkInitializer());
             var window = new FormsWindow();
             window.LoadApplication(app);
-            window.SetApplicationTitle("Your App Name");
+            window.SetApplicationTitle("GTK# Prism App");
             window.Show();
 
             Gtk.Application.Run();

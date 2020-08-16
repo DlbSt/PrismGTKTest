@@ -4,11 +4,7 @@ using Prism.Navigation;
 using PrismGTKTest.Enums;
 using PrismGTKTest.Models;
 using PrismGTKTest.Views;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using Xamarin.Forms;
 
 namespace PrismGTKTest.ViewModels
 {
@@ -35,6 +31,14 @@ namespace PrismGTKTest.ViewModels
             get { return menuItemCollection; }
             set { SetProperty(ref menuItemCollection, value); }
         }
+
+        private CustomMenuItem selectedItem;
+        public CustomMenuItem SelectedItem
+        {
+            get { return selectedItem; }
+            set { SetProperty(ref selectedItem, value); }
+        }
+
         #endregion
 
         #region Commands
@@ -54,7 +58,8 @@ namespace PrismGTKTest.ViewModels
 
         private async void NavigateAsync(CustomMenuItem item)
         {
-            await _navigationService.NavigateAsync("CustomNavigationPage/" + item.TargetType.Name);
+            SelectedItem = item;
+            await _navigationService.NavigateAsync(item.TargetType.Name);
         }
     }
 }

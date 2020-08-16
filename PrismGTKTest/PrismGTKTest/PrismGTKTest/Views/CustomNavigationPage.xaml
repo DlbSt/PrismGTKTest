@@ -5,4 +5,5 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     BackgroundColor="Transparent"
     BarBackgroundColor="{StaticResource NavBarBackgroundColor}"
-    BarTextColor="{StaticResource NavBarTextColor}" />
+    BarTextColor="{StaticResource NavBarTextColor}"
+    NavigationPage.HasNavigationBar="False" />

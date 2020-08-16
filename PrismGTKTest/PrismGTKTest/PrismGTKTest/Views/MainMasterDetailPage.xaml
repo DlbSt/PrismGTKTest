@@ -9,17 +9,21 @@
     xmlns:views="clr-namespace:PrismGTKTest.Views"
     Title=" "
     prism:ViewModelLocator.AutowireViewModel="True"
-    MasterBehavior="Popover">
+    MasterBehavior="Split">
     <MasterDetailPage.Resources>
         <converters:ItemTappedEventArgsConverter x:Key="ItemTappedEventArgsConverter" />
     </MasterDetailPage.Resources>
     <MasterDetailPage.Master>
         <ContentPage Title=" ">
+            <!-- <ContentPage.Icon>
+                <FileImageSource File="Images/hamburger_menu_white_black_bck.jpg" />
+            </ContentPage.Icon>-->
             <ContentPage.Content>
                 <ListView
                     BackgroundColor="{StaticResource MenuBackgroundColor}"
                     CachingStrategy="RecycleElement"
-                    ItemsSource="{Binding MenuItemCollection, Mode=OneTime}">
+                    ItemsSource="{Binding MenuItemCollection, Mode=OneTime}"
+                    SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

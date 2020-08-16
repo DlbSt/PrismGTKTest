@@ -12,6 +12,8 @@ namespace PrismGTKTest.Views
         public CustomNavigationPage(Page root) : base(root)
         {
             InitializeComponent();
+
+            SetHasNavigationBar(root, false);
         }
     }
 }
